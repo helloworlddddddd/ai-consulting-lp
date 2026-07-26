@@ -111,6 +111,10 @@ h2 {
   background: #000;
 }
 
+.demo-media video.landscape {
+  max-width: 100%;
+}
+
 .demo-sub-image {
   width: 100%;
   max-width: 420px;
