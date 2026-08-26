@@ -26,9 +26,9 @@
     </a>
     <nav class="site-nav">
       <a href="#service">できること</a>
-      <a href="#tech">技術</a>
       <a href="#works">実績</a>
       <a href="#about">プロフィール</a>
+      <a href="#tech">技術</a>
     </nav>
     <a href="#contact" class="btn btn-primary btn-sm">
       <span class="btn-ico" aria-hidden="true">
@@ -181,72 +181,8 @@
   </section>
 
 
-  <!-- ============ TECH ============ -->
-  <section class="section section-alt" id="tech">
-    <div class="shell">
-      <div class="sec-head reveal">
-        <p class="sec-watermark" aria-hidden="true">TECH</p>
-        <h2 class="sec-title"><span class="dash"></span>AIの中身も、自分で作っています</h2>
-      </div>
-      <p class="sec-lead reveal">できあいのAIサービスを組み合わせてお渡しするのではなく、仕組みそのものを設計して、動くところまで実装しています。<br class="pc-only">副業のYouTube運用のために自分用に作った、次のシステムがその一例です。</p>
-
-      <article class="card tech-card reveal">
-        <p class="tech-eyebrow">RAG（検索拡張生成）</p>
-        <h3>1万本を超える台本から、内容の似ているものを探し出すAI</h3>
-        <p class="tech-lead">競合35チャンネル・約1万2千本ぶんの動画台本を集めたデータベースを作り、「考えている企画が過去の誰かとかぶっていないか」をAIに探させる仕組みです。キーワードが一致するかではなく<strong>文章の意味が近いかどうか</strong>で探すので、言い回しがまったく違っても同じ趣旨のものを見つけ出せます。プロフィールに書いた「ネタ探しが週12〜16時間から6〜8時間に半減した」のは、このシステムによるものです。</p>
-
-        <ol class="flow">
-          <li><span class="flow-no">01</span><p class="flow-t">集める</p><p class="flow-s">YouTube APIで対象の動画を自動収集</p></li>
-          <li><span class="flow-no">02</span><p class="flow-t">文字にする</p><p class="flow-s">音声を手元のPCで文字起こし</p></li>
-          <li><span class="flow-no">03</span><p class="flow-t">要点を抜く</p><p class="flow-s">ローカルAIでフック・独自性・結末を抽出</p></li>
-          <li><span class="flow-no">04</span><p class="flow-t">意味を数値にする</p><p class="flow-s">台本1本を1,536個の数値の並びに変換</p></li>
-          <li><span class="flow-no">05</span><p class="flow-t">近いものを探す</p><p class="flow-s">数値の近さで上位10件をふるいにかける</p></li>
-          <li><span class="flow-no">06</span><p class="flow-t">判定する</p><p class="flow-s">絞った候補だけをAIに渡して最終判断</p></li>
-        </ol>
-
-        <div class="tech-spec">
-          <p class="tags-label">使っている技術</p>
-          <ul class="chips">
-            <li>OpenAI text-embedding-3-small</li>
-            <li>1,536次元ベクトル</li>
-            <li>コサイン類似度</li>
-            <li>faster-whisper（large-v3-turbo）</li>
-            <li>ローカルLLM（Ollama）</li>
-            <li>差分ハッシュによるキャッシュ更新</li>
-            <li>APIキーの自動切り替え</li>
-          </ul>
-        </div>
-
-        <p class="svc-note">一度計算したベクトルはキャッシュしてあり、台本が増えたときだけ差分を計算し直します。API制限に当たればキーを自動で切り替え、途中で止まっても処理済みを記録してあるので同じ動画を二度処理しません。動かして終わりではなく、毎週使い続けられる形にしてあります。</p>
-      </article>
-
-      <article class="card tech-apply reveal">
-        <h3>同じ仕組みが、社内の「探す時間」を減らします</h3>
-        <p class="tech-lead">この技術はRAG（検索拡張生成）と呼ばれ、動画の台本を<strong>御社の書類</strong>に置き換えれば、そのまま社内向けのAIになります。過去の見積書、議事録、作業マニュアル、社内規程——「あれ、どうやったんだっけ」を、担当者の手を止めずにAIへ聞ける状態です。</p>
-        <ul class="apply-list">
-          <li>
-            <p class="apply-t">聞けば、探して答える</p>
-            <p class="apply-s">「去年の◯◯社の見積、いくらだった？」に、社内の書類を探しにいって答えます。ファイル名を覚えている必要はありません。</p>
-          </li>
-          <li>
-            <p class="apply-t">どの書類を見たかを示せる</p>
-            <p class="apply-s">AIが勝手に作文するのではなく、根拠にしたファイルを提示します。答えが正しいかを、その場で確かめられます。</p>
-          </li>
-          <li>
-            <p class="apply-t">資料が増えても手間が増えない</p>
-            <p class="apply-s">新しく置かれたファイルを見つけて自動で取り込みます。増えた分だけを処理するので、運用の負担が増えていきません。</p>
-          </li>
-          <li>
-            <p class="apply-t">ベテランの頭の中を、置いておける</p>
-            <p class="apply-s">特定の担当者しか分からない業務の受け皿になります。その人が休んでも、過去のやり方を書類から引き出せます。</p>
-          </li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
   <!-- ============ WORKS ============ -->
-  <section class="section" id="works">
+  <section class="section section-alt" id="works">
     <div class="shell">
       <div class="sec-head reveal">
         <p class="sec-watermark" aria-hidden="true">WORKS</p>
@@ -280,7 +216,7 @@
   </section>
 
   <!-- ============ ABOUT ============ -->
-  <section class="section section-alt" id="about">
+  <section class="section" id="about">
     <div class="shell">
       <div class="sec-head reveal">
         <p class="sec-watermark" aria-hidden="true">ABOUT</p>
@@ -351,6 +287,70 @@
           </li>
         </ol>
       </div>
+  </section>
+
+  <!-- ============ TECH ============ -->
+  <section class="section section-alt" id="tech">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark" aria-hidden="true">TECH</p>
+        <h2 class="sec-title"><span class="dash"></span>AIの中身も、自分で作っています</h2>
+      </div>
+      <p class="sec-lead reveal">できあいのAIサービスを組み合わせてお渡しするのではなく、仕組みそのものを設計して、動くところまで実装しています。<br class="pc-only">プロフィールでふれた「ネタ探しを週12〜16時間から6〜8時間に半減させたツール」が、まさにこれです。</p>
+
+      <article class="card tech-card reveal">
+        <p class="tech-eyebrow">RAG（検索拡張生成）</p>
+        <h3>1万本を超える台本から、内容の似ているものを探し出すAI</h3>
+        <p class="tech-lead">競合35チャンネル・約1万2千本ぶんの動画台本を集めたデータベースを作り、「考えている企画が過去の誰かとかぶっていないか」をAIに探させる仕組みです。キーワードが一致するかではなく<strong>文章の意味が近いかどうか</strong>で探すので、言い回しがまったく違っても同じ趣旨のものを見つけ出せます。思いつきの試作ではなく、毎週の企画づくりで実際に使い続けているものです。</p>
+
+        <ol class="flow">
+          <li><span class="flow-no">01</span><p class="flow-t">集める</p><p class="flow-s">YouTube APIで対象の動画を自動収集</p></li>
+          <li><span class="flow-no">02</span><p class="flow-t">文字にする</p><p class="flow-s">音声を手元のPCで文字起こし</p></li>
+          <li><span class="flow-no">03</span><p class="flow-t">要点を抜く</p><p class="flow-s">ローカルAIでフック・独自性・結末を抽出</p></li>
+          <li><span class="flow-no">04</span><p class="flow-t">意味を数値にする</p><p class="flow-s">台本1本を1,536個の数値の並びに変換</p></li>
+          <li><span class="flow-no">05</span><p class="flow-t">近いものを探す</p><p class="flow-s">数値の近さで上位10件をふるいにかける</p></li>
+          <li><span class="flow-no">06</span><p class="flow-t">判定する</p><p class="flow-s">絞った候補だけをAIに渡して最終判断</p></li>
+        </ol>
+
+        <div class="tech-spec">
+          <p class="tags-label">使っている技術</p>
+          <ul class="chips">
+            <li>OpenAI text-embedding-3-small</li>
+            <li>1,536次元ベクトル</li>
+            <li>コサイン類似度</li>
+            <li>faster-whisper（large-v3-turbo）</li>
+            <li>ローカルLLM（Ollama）</li>
+            <li>差分ハッシュによるキャッシュ更新</li>
+            <li>APIキーの自動切り替え</li>
+          </ul>
+        </div>
+
+        <p class="svc-note">一度計算したベクトルはキャッシュしてあり、台本が増えたときだけ差分を計算し直します。API制限に当たればキーを自動で切り替え、途中で止まっても処理済みを記録してあるので同じ動画を二度処理しません。動かして終わりではなく、毎週使い続けられる形にしてあります。</p>
+      </article>
+
+      <article class="card tech-apply reveal">
+        <h3>同じ仕組みが、社内の「探す時間」を減らします</h3>
+        <p class="tech-lead">この技術はRAG（検索拡張生成）と呼ばれ、動画の台本を<strong>御社の書類</strong>に置き換えれば、そのまま社内向けのAIになります。過去の見積書、議事録、作業マニュアル、社内規程——「あれ、どうやったんだっけ」を、担当者の手を止めずにAIへ聞ける状態です。</p>
+        <ul class="apply-list">
+          <li>
+            <p class="apply-t">聞けば、探して答える</p>
+            <p class="apply-s">「去年の◯◯社の見積、いくらだった？」に、社内の書類を探しにいって答えます。ファイル名を覚えている必要はありません。</p>
+          </li>
+          <li>
+            <p class="apply-t">どの書類を見たかを示せる</p>
+            <p class="apply-s">AIが勝手に作文するのではなく、根拠にしたファイルを提示します。答えが正しいかを、その場で確かめられます。</p>
+          </li>
+          <li>
+            <p class="apply-t">資料が増えても手間が増えない</p>
+            <p class="apply-s">新しく置かれたファイルを見つけて自動で取り込みます。増えた分だけを処理するので、運用の負担が増えていきません。</p>
+          </li>
+          <li>
+            <p class="apply-t">ベテランの頭の中を、置いておける</p>
+            <p class="apply-s">特定の担当者しか分からない業務の受け皿になります。その人が休んでも、過去のやり方を書類から引き出せます。</p>
+          </li>
+        </ul>
+      </article>
+    </div>
   </section>
 
   <!-- ============ FIT ============ -->
