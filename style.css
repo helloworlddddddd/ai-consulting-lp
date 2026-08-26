@@ -418,7 +418,12 @@ p { margin: 0; }
 /* ============================================================
    Tech
    ============================================================ */
-.tech-card { margin-bottom: 20px; }
+.tech-divider {
+  border: 0;
+  height: 1px;
+  background: var(--line);
+  margin: 38px 0 34px;
+}
 .tech-eyebrow {
   display: inline-block;
   font-family: var(--en);
@@ -851,7 +856,7 @@ p { margin: 0; }
   .e2e-grid > li { padding: 26px 22px; }
   .e2e { margin-top: 64px; }
   .flow li { padding: 18px 16px; }
-  .tech-card { margin-bottom: 24px; }
+  .tech-divider { margin: 52px 0 46px; }
   .fit-item { padding: 32px 28px; }
   .card.fit-item { padding: 32px 28px; }
 
