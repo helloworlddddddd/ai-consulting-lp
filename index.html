@@ -3,118 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>業務の棚卸しから始めるAI導入支援</title>
+<title>ai-rakuto｜業務の棚卸しから始めるAI導入支援</title>
+<meta name="description" content="長野の中小企業向けに、日々の“ちょっとした手間”をAIで自動化します。大がかりなDXではなく、業務の棚卸しから一緒に始めるAI導入支援・業務自動化。">
+<meta property="og:title" content="ai-rakuto｜業務の棚卸しから始めるAI導入支援">
+<meta property="og:description" content="大がかりなDXではなく、日々の小さな面倒をAIで解消することから始めませんか。">
+<meta property="og:type" content="website">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="hero">
-  <div class="container">
-    <p class="hero-eyebrow">このお手紙をお読みいただき、ありがとうございます。</p>
-    <h1>"ちょっとした手間"の積み重ねが、<br>あなたの時間を奪っています。</h1>
-    <p class="hero-sub">大がかりなDXではなく、日々の小さな面倒をAIで解消することから始めませんか。</p>
-    <a href="#cta" class="btn-primary">まずはお電話でお話しする</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="6" rx="3" fill="#0b37e8"/><rect x="2" y="14" width="19" height="6" rx="3" fill="#00a0e9"/><rect x="2" y="22" width="10" height="6" rx="3" fill="#c9cdd6"/></svg>
+      </span>
+      <span class="brand-name">ai-rakuto</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#service">できること</a>
+      <a href="#works">実績</a>
+      <a href="#about">プロフィール</a>
+      <a href="#fit">向いている会社</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm">
+      <span class="btn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </span>
+      <span class="btn-lbl">電話で相談</span>
+    </a>
   </div>
-</section>
+</header>
 
-<section class="demos">
-  <div class="container">
-    <h2>できることの一例</h2>
+<main id="top">
 
-    <div class="demo-card">
-      <div class="demo-media">
-        <video controls playsinline preload="metadata" class="landscape" poster="assets/images/line-yoyaku-poster.jpg">
-          <source src="assets/videos/line-yoyaku.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="demo-text">
-        <h3>①予約受付〜前日リマインドの自動化</h3>
-        <p>お客様からの予約を、普段お使いのアプリで自動的に受け付けられるようになります。内容はいつものカレンダーに自動で反映されるので、新しい管理画面を覚えたり、予約の二重登録を確認したりする手間がありません。前日には、忘れないよう自動でリマインドも届くので、無断キャンセルの防止にもつながります。</p>
-        <p class="demo-note">（今回はLINEとGoogleカレンダーで組んでいますが、普段使っているツールに合わせて構成できます）</p>
-      </div>
-    </div>
-
-    <div class="demo-card">
-      <div class="demo-media">
-        <video controls playsinline preload="metadata" class="landscape" poster="assets/images/spreadsheet-invoice-poster.jpg">
-          <source src="assets/videos/spreadsheet-invoice.mp4" type="video/mp4">
-        </video>
-        <div class="demo-sub-image-group">
-          <img src="assets/images/invoice-pdf.jpg" alt="自動生成された請求書PDF">
-          <img src="assets/images/invoice-mail.jpg" alt="自動送信されたメール">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="shell hero-inner">
+      <div class="hero-copy reveal">
+        <p class="hero-eyebrow">このお手紙をお読みいただき、ありがとうございます。</p>
+        <h1>“ちょっとした手間”を、<br>AIに預けませんか。</h1>
+        <p class="hero-sub">大がかりなDXではなく、日々の小さな面倒をAIで解消することから始めます。<br class="pc-only">まずは15分、一緒に業務の棚卸しをするところから。</p>
+        <div class="btn-row">
+          <a href="tel:08062943642" class="btn btn-primary">
+            <span class="btn-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="btn-lbl">電話で相談する</span>
+          </a>
+          <a href="mailto:kawaura@ai-rakuto.jp" class="btn btn-dark">
+            <span class="btn-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            </span>
+            <span class="btn-lbl">メールで質問する</span>
+          </a>
         </div>
       </div>
-      <div class="demo-text">
-        <h3>②請求書の作成〜送付の自動化</h3>
-        <p>いつも入力しているシートやフォームに情報を入れるだけで、必要な項目がすべて揃った請求書が自動で作成され、そのまま送付まで完了します。</p>
-        <p class="demo-note">（今回はスプレッドシートとメールで組んでいますが、普段使っているツールに合わせて構成できます）</p>
+      <div class="hero-art" aria-hidden="true">
+        <span class="shape shape-dot"></span>
+        <span class="shape shape-circle"></span>
+        <span class="shape shape-tri"></span>
+        <span class="shape shape-sq"></span>
       </div>
     </div>
+  </section>
 
-    <div class="demo-card">
-      <div class="demo-media">
-        <video controls playsinline preload="metadata" class="landscape" poster="assets/images/voice-memo-poster.jpg">
-          <source src="assets/videos/voice-memo.mp4" type="video/mp4">
-        </video>
+  <!-- ============ SERVICE ============ -->
+  <section class="section" id="service">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark" aria-hidden="true">SERVICE</p>
+        <h2 class="sec-title"><span class="dash"></span>できること</h2>
       </div>
-      <div class="demo-text">
-        <h3>③会議の音声から議事録配信までの自動化</h3>
-        <p>録音データを所定の場所にアップロードするだけで、自動で聞き取りやすく整えられ、いつも使っている連絡ツールに配信されます。内容を要約するのではなく、聞き取りにくい部分を整えるだけなので、決定事項や発言の抜け漏れがありません。</p>
-        <p class="demo-note">（今回はGoogleドライブとSlackで組んでいますが、普段使っているツールに合わせて構成できます）</p>
+      <p class="sec-lead reveal">いま使っているLINE・スプレッドシート・メールはそのままに、その裏側だけをAIに任せます。<br class="pc-only">新しい管理画面を覚え直す必要はありません。以下は実際に動いているデモです。</p>
+
+      <article class="card svc reveal">
+        <div class="svc-head">
+          <div class="svc-copy">
+            <p class="svc-num">01</p>
+            <h3>予約受付〜前日リマインドの自動化</h3>
+            <p>お客様からの予約を、普段お使いのアプリで自動的に受け付けられるようになります。内容はいつものカレンダーに自動で反映されるので、新しい管理画面を覚えたり、予約の二重登録を確認したりする手間がありません。前日には、忘れないよう自動でリマインドも届くので、無断キャンセルの防止にもつながります。</p>
+          </div>
+          <div class="svc-tags">
+            <p class="tags-label">この仕組みの特徴</p>
+            <ul class="chips">
+              <li>LINEで受付</li>
+              <li>カレンダーに自動反映</li>
+              <li>前日リマインド</li>
+              <li>無断キャンセル防止</li>
+              <li>二重登録の確認が不要</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-media">
+          <video controls playsinline preload="metadata" poster="assets/images/line-yoyaku-poster.jpg">
+            <source src="assets/videos/line-yoyaku.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="svc-note">今回はLINEとGoogleカレンダーで組んでいますが、普段使っているツールに合わせて構成できます。</p>
+      </article>
+
+      <article class="card svc reveal">
+        <div class="svc-head">
+          <div class="svc-copy">
+            <p class="svc-num">02</p>
+            <h3>請求書の作成〜送付の自動化</h3>
+            <p>いつも入力しているシートやフォームに情報を入れるだけで、必要な項目がすべて揃った請求書が自動で作成され、そのまま送付まで完了します。転記も、PDF化も、メールの宛先確認も要りません。</p>
+          </div>
+          <div class="svc-tags">
+            <p class="tags-label">この仕組みの特徴</p>
+            <ul class="chips">
+              <li>入力は1か所だけ</li>
+              <li>PDFを自動作成</li>
+              <li>メール送付まで自動</li>
+              <li>転記ミスがなくなる</li>
+              <li>いつもの様式のまま</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-media">
+          <video controls playsinline preload="metadata" poster="assets/images/spreadsheet-invoice-poster.jpg">
+            <source src="assets/videos/spreadsheet-invoice.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="svc-subgrid">
+          <figure>
+            <img src="assets/images/invoice-pdf.jpg" alt="自動生成された請求書PDF" loading="lazy">
+            <figcaption>自動で作られた請求書PDF</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/invoice-mail.jpg" alt="自動送信されたメール" loading="lazy">
+            <figcaption>そのまま自動送信されたメール</figcaption>
+          </figure>
+        </div>
+        <p class="svc-note">今回はスプレッドシートとメールで組んでいますが、普段使っているツールに合わせて構成できます。</p>
+      </article>
+
+      <article class="card svc reveal">
+        <div class="svc-head">
+          <div class="svc-copy">
+            <p class="svc-num">03</p>
+            <h3>会議の音声から議事録配信までの自動化</h3>
+            <p>録音データを所定の場所にアップロードするだけで、自動で聞き取りやすく整えられ、いつも使っている連絡ツールに配信されます。内容を要約するのではなく、聞き取りにくい部分を整えるだけなので、決定事項や発言の抜け漏れがありません。</p>
+          </div>
+          <div class="svc-tags">
+            <p class="tags-label">この仕組みの特徴</p>
+            <ul class="chips">
+              <li>アップロードするだけ</li>
+              <li>要約せず全文を整形</li>
+              <li>決定事項が抜けない</li>
+              <li>いつもの連絡ツールに配信</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-media">
+          <video controls playsinline preload="metadata" poster="assets/images/voice-memo-poster.jpg">
+            <source src="assets/videos/voice-memo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="svc-note">今回はGoogleドライブとSlackで組んでいますが、普段使っているツールに合わせて構成できます。</p>
+      </article>
+
+      <div class="callout reveal">
+        <p>これらは自動化の<strong>一例</strong>です。実際に何を自動化すべきかは、まず一緒に業務を棚卸しして、ネックになっている部分を見つけるところから決めていきましょう。</p>
+        <a href="#contact" class="btn btn-dark">
+          <span class="btn-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+          <span class="btn-lbl">棚卸しの相談をする</span>
+        </a>
       </div>
     </div>
+  </section>
 
-    <p class="demos-summary">これらは自動化の一例です。実際に何を自動化すべきかは、まず一緒に業務を棚卸しして、ネックになっている部分を見つけるところから決めていきましょう。</p>
-  </div>
-</section>
+  <!-- ============ WORKS ============ -->
+  <section class="section section-alt" id="works">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark" aria-hidden="true">WORKS</p>
+        <h2 class="sec-title"><span class="dash"></span>実績</h2>
+      </div>
 
-<section class="portfolio">
-  <div class="container">
-    <h2>Webサイト制作も：猫カフェの看板猫紹介サイト</h2>
-    <p>長野市の猫カフェ「ねこカフェ なる」で、手書きの猫紹介ボードが読みづらく、確認のたびに席を立つ必要があるのに気づき、スマホでそのまま座って見られる猫スタッフ紹介サイトを制作しました。店主が愛情を込めて書いた紹介文や写真はそのまま活かし、見やすさだけを整えています。</p>
-    <img src="assets/images/nekocafe-top.jpg" alt="ねこカフェ なる スタッフ紹介サイト トップ画面" class="portfolio-image">
-    <p><a href="https://nekocafe-naru-web.vercel.app" target="_blank" rel="noopener">→ 実際のサイトはこちら</a></p>
-  </div>
-</section>
+      <article class="card work reveal">
+        <div class="work-copy">
+          <p class="work-tag">Webサイト制作</p>
+          <h3>猫カフェの看板猫紹介サイト</h3>
+          <p>長野市の猫カフェ「ねこカフェ なる」で、手書きの猫紹介ボードが読みづらく、確認のたびに席を立つ必要があるのに気づき、スマホでそのまま座って見られる猫スタッフ紹介サイトを制作しました。店主が愛情を込めて書いた紹介文や写真はそのまま活かし、見やすさだけを整えています。</p>
+          <ul class="chips">
+            <li>スマホ最適化</li>
+            <li>原文をそのまま活用</li>
+            <li>実際に導入・稼働中</li>
+          </ul>
+          <a href="https://nekocafe-naru-web.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+            <span class="btn-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+            <span class="btn-lbl">実際のサイトを見る</span>
+          </a>
+        </div>
+        <div class="work-media">
+          <div class="phone">
+            <img src="assets/images/nekocafe-top.jpg" alt="ねこカフェ なる スタッフ紹介サイト トップ画面" loading="lazy">
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<section class="profile">
-  <div class="container">
-    <h2>川浦優太について</h2>
-    <p>エンジニア歴6年。現在は企業に勤めながら、副業としてAI導入支援・業務自動化のご相談を承っています。</p>
-    <p>新卒時は公務員を目指して試験勉強をしていましたが、思うようにいかず断念。方向転換してエンジニアの道に進みました。これまで、Suica等IC決済に対応した自動販売機の決済基幹システムや、NEC社のマンション向け顔認証（マルチモーダル生体認証）システムのUI開発を、受託の立場で担当してきました。現職では、新規システムの要件を固めるためのデータ集計ツールや、日々の保守業務を効率化するツールの開発に携わっています。</p>
-    <p>本業を終えた後の限られた時間で、副業のYouTube用のネタ探しに、平日4日・1日3〜4時間、週にして12〜16時間ほどを費やす日々が続いていました。土日もぎりぎりまで動画の素材集めと編集に追われ、「このままでは自分の時間がなくなる」という焦りとしんどさを感じていました。その状況を変えたくて、同じく本業終わりの時間を使い、AIを使ったネタ管理ツールを自作してみることにしました。使い始めると、週12〜16時間かかっていたネタ探しが6〜8時間ほどまで半減し、木曜日には動画の素材収集まで終えられるようになりました。ぎりぎりだった土日に余裕が生まれた瞬間、「面倒な作業は、こんなに楽になるのか」と純粋に驚き、感動しました。この体験があったからこそ、AIによる業務自動化を、地方の中小企業の現場にも届けたいと考えるようになりました。</p>
-    <p class="qualification"><strong>保有資格：</strong>基本情報技術者試験</p>
-  </div>
-</section>
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark" aria-hidden="true">ABOUT</p>
+        <h2 class="sec-title"><span class="dash"></span>プロフィール</h2>
+      </div>
 
-<section class="fit">
-  <div class="container">
-    <h2>こんな会社に向いています</h2>
-    <ul>
-      <li>紙とExcel、電話でなんとか業務が回っている（本格的なシステム化はこれから）</li>
-      <li>特定の担当者しか分からない業務がある（その人が休むと止まる）</li>
-      <li>「AIってよく聞くけど、自分の会社で何ができるのか分からない」</li>
-      <li>新しいツールを一から覚える余裕はない（普段使っているLINE・スプレッドシート・メールのままで良い）</li>
-      <li>都市部のITベンダーやコンサルに相談するほどの悩みではないと思っている（けれど、地味にずっと困っている）</li>
-    </ul>
-    <p>まずは一緒に業務を棚卸しして、どこがネックになっているのかを整理するところから始めましょう。</p>
-  </div>
-</section>
+      <div class="about-grid">
+        <aside class="about-side reveal">
+          <p class="about-role">AI導入支援サービス ai-rakuto</p>
+          <p class="about-name">川浦 優太</p>
+          <p class="about-lede">エンジニア歴6年。現在は企業に勤めながら、副業としてAI導入支援・業務自動化のご相談を承っています。</p>
+          <dl class="stats">
+            <div><dt>エンジニア歴</dt><dd>6<span>年</span></dd></div>
+            <div><dt>自作ツールでの削減</dt><dd>週12<span>h</span> → 6<span>h</span></dd></div>
+          </dl>
+          <p class="about-cert">保有資格：基本情報技術者試験</p>
+        </aside>
 
-<section class="cta" id="cta">
-  <div class="container">
-    <h2>まずは15分、一緒に業務の棚卸しをしませんか</h2>
-    <p>いきなり提案や契約の話をするつもりはありません。まずは日々の業務を一緒に棚卸しして、どこがネックになっているのかを整理するところから始めます。改善できそうな部分が見つかれば、それをどう自動化していくかも一緒に検討していきます。</p>
-    <p class="phone-number">080-6294-3642</p>
-    <p class="email-line">まずは質問だけしたい、電話の前にもう少し詳しく知りたいという方は、メールでもお気軽にどうぞ：kawaura@ai-rakuto.jp</p>
-  </div>
-</section>
+        <div class="about-body reveal">
+          <p>新卒時は公務員を目指して試験勉強をしていましたが、思うようにいかず断念。方向転換してエンジニアの道に進みました。これまで、Suica等IC決済に対応した自動販売機の決済基幹システムや、NEC社のマンション向け顔認証（マルチモーダル生体認証）システムのUI開発を、受託の立場で担当してきました。現職では、新規システムの要件を固めるためのデータ集計ツールや、日々の保守業務を効率化するツールの開発に携わっています。</p>
+          <p>本業を終えた後の限られた時間で、副業のYouTube用のネタ探しに、平日4日・1日3〜4時間、週にして12〜16時間ほどを費やす日々が続いていました。土日もぎりぎりまで動画の素材集めと編集に追われ、「このままでは自分の時間がなくなる」という焦りとしんどさを感じていました。その状況を変えたくて、同じく本業終わりの時間を使い、AIを使ったネタ管理ツールを自作してみることにしました。使い始めると、週12〜16時間かかっていたネタ探しが6〜8時間ほどまで半減し、木曜日には動画の素材収集まで終えられるようになりました。</p>
+          <blockquote>ぎりぎりだった土日に余裕が生まれた瞬間、「面倒な作業は、こんなに楽になるのか」と純粋に驚き、感動しました。</blockquote>
+          <p>この体験があったからこそ、AIによる業務自動化を、地方の中小企業の現場にも届けたいと考えるようになりました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>川浦優太</p>
+  <!-- ============ FIT ============ -->
+  <section class="section section-alt" id="fit">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark" aria-hidden="true">CHECK</p>
+        <h2 class="sec-title"><span class="dash"></span>こんな会社に向いています</h2>
+      </div>
+
+      <ul class="fit-grid">
+        <li class="card fit-item reveal">
+          <span class="fit-no">01</span>
+          <p class="fit-main">紙とExcel、電話でなんとか業務が回っている</p>
+          <p class="fit-sub">本格的なシステム化はこれから</p>
+        </li>
+        <li class="card fit-item reveal">
+          <span class="fit-no">02</span>
+          <p class="fit-main">特定の担当者しか分からない業務がある</p>
+          <p class="fit-sub">その人が休むと止まってしまう</p>
+        </li>
+        <li class="card fit-item reveal">
+          <span class="fit-no">03</span>
+          <p class="fit-main">AIってよく聞くけど、自分の会社で何ができるのか分からない</p>
+          <p class="fit-sub">情報は多いのに、自社の話に翻訳されていない</p>
+        </li>
+        <li class="card fit-item reveal">
+          <span class="fit-no">04</span>
+          <p class="fit-main">新しいツールを一から覚える余裕はない</p>
+          <p class="fit-sub">普段使っているLINE・スプレッドシート・メールのままで良い</p>
+        </li>
+        <li class="card fit-item reveal">
+          <span class="fit-no">05</span>
+          <p class="fit-main">ITベンダーやコンサルに相談するほどの悩みではないと思っている</p>
+          <p class="fit-sub">けれど、地味にずっと困っている</p>
+        </li>
+      </ul>
+
+      <p class="sec-lead center reveal">ひとつでも当てはまれば、まずは一緒に業務を棚卸しして、どこがネックになっているのかを整理するところから始めましょう。</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="sec-watermark dark" aria-hidden="true">CONTACT</p>
+        <h2 class="sec-title light"><span class="dash"></span>お問い合わせ</h2>
+      </div>
+
+      <div class="contact-inner reveal">
+        <h3>まずは15分、<br class="sp-only">一緒に業務の棚卸しをしませんか</h3>
+        <p>いきなり提案や契約の話をするつもりはありません。まずは日々の業務を一緒に棚卸しして、どこがネックになっているのかを整理するところから始めます。改善できそうな部分が見つかれば、それをどう自動化していくかも一緒に検討していきます。</p>
+
+        <div class="contact-cards">
+          <a class="contact-card" href="tel:08062943642">
+            <span class="cc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="cc-label">お電話</span>
+            <span class="cc-value">080-6294-3642</span>
+            <span class="cc-note">タップでそのまま発信できます</span>
+          </a>
+          <a class="contact-card" href="mailto:kawaura@ai-rakuto.jp">
+            <span class="cc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            </span>
+            <span class="cc-label">メール</span>
+            <span class="cc-value mail">kawaura@ai-rakuto.jp</span>
+            <span class="cc-note">質問だけでもお気軽にどうぞ</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="6" rx="3" fill="#0b37e8"/><rect x="2" y="14" width="19" height="6" rx="3" fill="#00a0e9"/><rect x="2" y="22" width="10" height="6" rx="3" fill="#c9cdd6"/></svg>
+      </span>
+      <div>
+        <p class="footer-name">AI導入支援サービス ai-rakuto</p>
+        <p class="footer-sub">川浦 優太</p>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a href="#service">できること</a>
+      <a href="#works">実績</a>
+      <a href="#about">プロフィール</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
   </div>
 </footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach(function (el) { io.observe(el); });
+
+  var header = document.querySelector('.site-header');
+  var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
 
 </body>
 </html>
