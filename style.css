@@ -504,6 +504,7 @@ p { margin: 0; }
    Works
    ============================================================ */
 .work { display: grid; gap: 30px; }
+.work + .work { margin-top: 20px; }
 .work-tag {
   display: inline-block;
   font-size: 11.5px;
@@ -624,6 +625,18 @@ p { margin: 0; }
 }
 .e2e-lead { font-size: 15px; line-height: 1.95; }
 .e2e-lead strong { color: var(--ink); }
+.e2e-note {
+  margin-top: 20px;
+  padding: 24px 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #fff;
+  display: grid;
+  gap: 14px;
+}
+.e2e-note .tags-label { margin-bottom: 0; }
+.e2e-note p:not(.tags-label) { font-size: 14.5px; line-height: 1.95; }
+.e2e-note strong { color: var(--ink); }
 
 .e2e-grid {
   list-style: none;
@@ -820,6 +833,8 @@ p { margin: 0; }
   .apply-list { grid-template-columns: 1fr 1fr; gap: 20px 32px; }
   .contact-cards { grid-template-columns: 1fr 1fr; }
   .work { grid-template-columns: 1.4fr 1fr; align-items: center; gap: 44px; }
+  .work.is-solo { grid-template-columns: 1fr; }
+  .work + .work { margin-top: 24px; }
   .phone { max-width: 100%; width: 230px; }
   .about-grid { grid-template-columns: 300px 1fr; gap: 44px; }
   .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
