@@ -509,20 +509,28 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // 再生ボタンを押したら自動で画面いっぱい（フルスクリーン）にする
-  // ※ 'play'や'click'は実際のタップからワンテンポ遅れて発火するため、モバイル版Chromeだと
-  //   ユーザー操作の有効期限（ユーザーアクティベーション）を過ぎてrequestFullscreenが拒否される。
-  //   'pointerdown'（指が触れた瞬間）に同期的にフックすることで間に合わせる。
-  // ※ iPhone（Chrome含め全ブラウザがSafari＝WebKitエンジン）は標準のrequestFullscreenが
-  //   動画に効かないため、専用のwebkitEnterFullscreenを使う。
+  // ※ iPhone（Chrome含め全ブラウザがSafari＝WebKitエンジン）は、playsinlineを外すと
+  //   再生開始時にOS標準の全画面プレイヤーが自動で開く。これが本来やりたい挙動そのもので、
+  //   JSで再生に割り込まないため「再生自体が始まらない」問題も起きない。
+  // ※ それ以外（PC/Android Chrome）は'play'や'click'が実際のタップからワンテンポ遅れて
+  //   発火し、ユーザー操作の有効期限（ユーザーアクティベーション）を過ぎて拒否されるため、
+  //   'pointerdown'（指が触れた瞬間）に同期的にフックする。
+  var isIOS = /iP(hone|od|ad)/.test(navigator.platform) ||
+    (navigator.userAgent.indexOf('Mac') > -1 && 'ontouchend' in document);
+
   document.querySelectorAll('video').forEach(function (video) {
+    if (isIOS) {
+      video.removeAttribute('playsinline');
+      video.playsInline = false;
+      return;
+    }
     video.addEventListener('pointerdown', function () {
       if (!video.paused) return;
-      if (document.fullscreenElement) return;
-      if (video.webkitEnterFullscreen) {
-        video.webkitEnterFullscreen();
-      } else if (video.requestFullscreen) {
-        video.requestFullscreen().catch(function () {});
-      }
+      if (document.fullscreenElement || document.webkitFullscreenElement) return;
+      var request = video.requestFullscreen || video.webkitRequestFullscreen;
+      if (!request) return;
+      var result = request.call(video);
+      if (result && result.catch) result.catch(function () {});
     });
   });
 })();
