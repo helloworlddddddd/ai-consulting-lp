@@ -507,6 +507,16 @@
   var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // 再生ボタンを押したら自動で画面いっぱい（フルスクリーン）にする
+  document.querySelectorAll('video').forEach(function (video) {
+    video.addEventListener('play', function () {
+      if (document.fullscreenElement) return;
+      if (video.requestFullscreen) {
+        video.requestFullscreen().catch(function () {});
+      }
+    });
+  });
 })();
 </script>
 
