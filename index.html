@@ -509,13 +509,18 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // 再生ボタンを押したら自動で画面いっぱい（フルスクリーン）にする
-  // ※ 'play'や'click'は実際のタップからワンテンポ遅れて発火するため、スマホ版Chromeだと
+  // ※ 'play'や'click'は実際のタップからワンテンポ遅れて発火するため、モバイル版Chromeだと
   //   ユーザー操作の有効期限（ユーザーアクティベーション）を過ぎてrequestFullscreenが拒否される。
   //   'pointerdown'（指が触れた瞬間）に同期的にフックすることで間に合わせる。
+  // ※ iPhone（Chrome含め全ブラウザがSafari＝WebKitエンジン）は標準のrequestFullscreenが
+  //   動画に効かないため、専用のwebkitEnterFullscreenを使う。
   document.querySelectorAll('video').forEach(function (video) {
     video.addEventListener('pointerdown', function () {
+      if (!video.paused) return;
       if (document.fullscreenElement) return;
-      if (video.paused && video.requestFullscreen) {
+      if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+      } else if (video.requestFullscreen) {
         video.requestFullscreen().catch(function () {});
       }
     });
