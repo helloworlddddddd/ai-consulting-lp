@@ -509,11 +509,11 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // 再生ボタンを押したら自動で画面いっぱい（フルスクリーン）にする
-  // ※ 'play'イベントは発火が非同期になりやすく、スマホ版Chromeだとタップ操作の
-  //   有効期限（ユーザーアクティベーション）を過ぎてrequestFullscreenが拒否されることがある。
-  //   そのためタップ自体（clickイベント）に直接フックする。
+  // ※ 'play'や'click'は実際のタップからワンテンポ遅れて発火するため、スマホ版Chromeだと
+  //   ユーザー操作の有効期限（ユーザーアクティベーション）を過ぎてrequestFullscreenが拒否される。
+  //   'pointerdown'（指が触れた瞬間）に同期的にフックすることで間に合わせる。
   document.querySelectorAll('video').forEach(function (video) {
-    video.addEventListener('click', function () {
+    video.addEventListener('pointerdown', function () {
       if (document.fullscreenElement) return;
       if (video.paused && video.requestFullscreen) {
         video.requestFullscreen().catch(function () {});
